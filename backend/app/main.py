@@ -9,7 +9,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AI Student Assistant")
 
-# CORS - frontend (වෙනම origin එකකින්) backend එකට call කරන්න allow කරනවා
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

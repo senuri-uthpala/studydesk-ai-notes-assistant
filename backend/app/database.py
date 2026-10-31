@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# SQLite database file එක - "notes.db" කියලා file එකක් auto-create වෙනවා
+
 DATABASE_URL = "sqlite:///./notes.db"
 
 engine = create_engine(
@@ -13,7 +13,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-# Database session එකක් ලබාගන්න function එක
+
 def get_db():
     db = SessionLocal()
     try:
